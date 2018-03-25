@@ -4,9 +4,10 @@
 
 
 - Projects 
+  - Tasks List
   - Loan Calculator
   - Number Guesser
-  - Tasks List
+  - Book List
 
 - Content
   - Basics & Fundamentals
