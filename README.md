@@ -14,5 +14,7 @@
   - DOM Manipulation
   - Object-oriented Programming
   - Async JS
-  - ES2015+
+  - Ajax
+  - Fetch API
+  - ES6
   - JavaScript Patterns
