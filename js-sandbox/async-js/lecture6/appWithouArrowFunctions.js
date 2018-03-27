@@ -5,19 +5,23 @@ document.getElementById('button3').addEventListener('click', getExternal);
 function getText() {
   // fetch returns a promise
   fetch('test.txt')
-  .then(res => res.text())
-  .then(data => {
+  .then(function(res) {
+    return res.text();
+  })
+  .then(function(data) {
     document.getElementById('output').innerHTML = (data);
   })
-  .catch(err => {
+  .catch(function(err) {
     console.log('Error: ' + err);
   });
 }
 
 function getJSON() {
   fetch('posts.json')
-  .then(res => res.json())
-  .then(data => {
+  .then(function(res) {
+    return res.json();
+  })
+  .then(function(data) {
     let output = '';
 
     data.forEach(post => {
@@ -26,15 +30,17 @@ function getJSON() {
 
     document.getElementById('output').innerHTML = (output);
   })
-  .catch(err => {
+  .catch(function(err) {
     console.log('Error: ' + err);
   });
 }
 
 function getExternal() {
   fetch('https://api.github.com/users')
-  .then(res => res.json())
-  .then(data => {
+  .then(function(res) {
+    return res.json();
+  })
+  .then(function(data) {
     let output = '';
 
     data.forEach(user => {
@@ -43,7 +49,7 @@ function getExternal() {
 
     document.getElementById('output').innerHTML = (output);
   })
-  .catch(err => {
+  .catch(function(err) {
     console.log('Error: ' + err);
   });
 }
