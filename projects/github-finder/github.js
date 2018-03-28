@@ -15,7 +15,7 @@ class Github {
 
     return {
       profile: profileData,
-      repos = repoData
+      repos: repoData
     }
   }
 }
