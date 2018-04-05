@@ -8,6 +8,8 @@
   - Loan Calculator
   - Number Guesser
   - Book List
+  - GitHub Finder
+  - Weather JS
 
 - Content
   - Basics & Fundamentals
