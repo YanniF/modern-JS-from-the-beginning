@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tracalorie | Meal &amp; Calorie Tracker</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-wrapper blue">
+      <div class="container">
+        <a href="#" class="brand-logo center">Tracalorie</a>
+        <ul class="right">
+          <li><a href="" class="clear-btn btn blue lighten-2">Clear All</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <br>
+  <div class="container">
+    <!-- Form card -->
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">Add Meal / Food item</span>
+        <form class="col">
+          <div class="row">
+            <div class="input-field col s6">
+              <input type="text" placeholder="Add item" id="item-name">
+              <label for="item-name">Meal</label>
+            </div>
+            <div class="input-field col s6">
+              <input type="text" placeholder="Add calories" id="item-calories">
+              <label for="item-calories">Calories</label>
+            </div>
+            <button class="add-btn btn blue darken-3"><i class="fas fa-plus"></i> Add Meal</button>
+            <!-- <button class="update-btn btn orange"><i class="fas fa-pencil-alt"></i> Update Meal</button>
+            <button class="delete-btn btn red"><i class="fas fa-times"></i> Delete Meal</button> -->
+            <button class="back-btn btn grey right"><i class="fas fa-chevron-circle-left"></i> Back</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Calorie count -->
+    <h3 class="center-align">Total Calories: <span class="total-calories">0</span></h3>
+
+    <!-- item list -->
+    <ul id="item-list" class="collection">
+      <!-- <li class="collection-item" id="item-0">
+        <strong>Steak Dinner: </strong><em>1200 calories</em>
+        <a href="#" class="secondary-content"><i class="fas fa-pencil-alt"></i></a>
+      </li>
+      <li class="collection-item" id="item-0">
+        <strong>Cookie: </strong><em>400 calories</em>
+        <a href="#" class="secondary-content"><i class="fas fa-pencil-alt"></i></a>
+      </li>
+      <li class="collection-item" id="item-0">
+        <strong>Eggs: </strong><em>300 calories</em>
+        <a href="#" class="secondary-content"><i class="fas fa-pencil-alt"></i></a>
+      </li> -->
+    </ul>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
