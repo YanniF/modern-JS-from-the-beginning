@@ -9,7 +9,7 @@ const ItemCtrl = (function() {
 
   // data structure / state
   const data = {
-    items: [],
+    items: StorageCtrl.getItemsFromStorage(),
     currentItem: null,
     totalCalories: 0
   }

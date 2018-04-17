@@ -1,8 +1,5 @@
-//---- STORAGE CONTROLLER ----//
-
-
 //--- APP CONTROLLER ---//
-const App = (function(ItemCtrl, UICtrl) {
+const App = (function(StorageCtrl, ItemCtrl, UICtrl) {
   // load event listeners
   const loadEventListeners = function() {
     const UISelectors = UICtrl.getSelectors();
@@ -21,7 +18,7 @@ const App = (function(ItemCtrl, UICtrl) {
     document.querySelector(UISelectors.updateBtn).addEventListener('click', itemUpdateSubmit);
     document.querySelector(UISelectors.deleteBtn).addEventListener('click', itemDeleteSubmit);
     document.querySelector(UISelectors.backBtn).addEventListener('click', UICtrl.clearEditState);
-    document.querySelector(UISelectors.clearBtn).addEventListener('click', UICtrl.clearAllItemsClick);
+    document.querySelector(UISelectors.clearBtn).addEventListener('click', clearAllItemsClick);
   }
 
   // add item submit
@@ -38,6 +35,10 @@ const App = (function(ItemCtrl, UICtrl) {
       const totalCalories = ItemCtrl.getTotalCalories();
 
       UICtrl.showTotalCalories(totalCalories);
+
+      // store in localStorage
+      StorageCtrl.storeItem(newItem);
+
       UICtrl.clearInput();
     }
 
@@ -71,6 +72,9 @@ const App = (function(ItemCtrl, UICtrl) {
 
     const totalCalories = ItemCtrl.getTotalCalories();
     UICtrl.showTotalCalories(totalCalories);
+
+    StorageCtrl.updateItemStorage(updatedItem);
+
     UICtrl.clearEditState();
 
     e.preventDefault();
@@ -83,6 +87,9 @@ const App = (function(ItemCtrl, UICtrl) {
     UICtrl.deleteListItem(currentItem.id);
 
     UICtrl.showTotalCalories(ItemCtrl.getTotalCalories());
+
+    StorageCtrl.deleteItemFromStorage(currentItem.id);
+
     UICtrl.clearEditState();   
 
     e.preventDefault();
@@ -91,9 +98,12 @@ const App = (function(ItemCtrl, UICtrl) {
   const clearAllItemsClick = function() {
     // delete all items from data structure
     ItemCtrl.clearAllItems();
+    
     UICtrl.showTotalCalories(ItemCtrl.getTotalCalories());
-    UICtrl.clearEditState(); 
     UICtrl.removeItems();
+    
+    StorageCtrl.clearItemsFromStorage();
+
     // hide the ul
     UICtrl.hideList();
   }
@@ -121,7 +131,7 @@ const App = (function(ItemCtrl, UICtrl) {
       loadEventListeners();
     }
   }  
-})(ItemCtrl, UICtrl);
+})(StorageCtrl, ItemCtrl, UICtrl);
 
 
 // initialize app
