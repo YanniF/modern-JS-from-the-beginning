@@ -9,8 +9,8 @@
   - [Number Guesser](https://yannif.github.io/modern-JS-from-the-beginning/projects/number-guesser/)
   - [Book List](https://yannif.github.io/modern-JS-from-the-beginning/projects/book-list/)
   - [GitHub Finder](https://yannif.github.io/modern-JS-from-the-beginning/projects/github-finder/)
-  - [Weather JS](https://yannif.github.io/modern-JS-from-the-beginning/projects/weatherjs/)
   - [Tracalorie](https://yannif.github.io/modern-JS-from-the-beginning/projects/tracalorie/)
+  - Weather JS
 
 - Content
   - Basics & Fundamentals
