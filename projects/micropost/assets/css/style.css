@@ -1,0 +1,8 @@
+.delete {
+  color: #f00;
+  transition: color .2s;
+}
+
+.delete:hover {
+  color: #c00707;
+}

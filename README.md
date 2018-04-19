@@ -11,7 +11,8 @@
   - [GitHub Finder](https://yannif.github.io/modern-JS-from-the-beginning/projects/github-finder/)
   - [Tracalorie](https://yannif.github.io/modern-JS-from-the-beginning/projects/tracalorie/)
   - Weather JS
-
+  - MicroPost
+  
 - Content
   - Basics & Fundamentals
   - DOM Manipulation
